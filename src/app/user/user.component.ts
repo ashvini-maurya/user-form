@@ -10,7 +10,6 @@ export class UserComponent implements OnInit {
   title = 'app';
   formObjects = [];
   register(argument) {
-
 	var formObject = 
 		{
 			name: (<HTMLInputElement>document.getElementById('name')).value,
@@ -21,18 +20,16 @@ export class UserComponent implements OnInit {
 		}
 
 	this.formObjects.push(formObject)
-	localStorage['users'] = JSON.stringify({shit: this.formObjects})	
+	localStorage['users'] = JSON.stringify({root: this.formObjects})	
 
-	//var retrievedObject = localStorage['formObject'];
+	console.log(localStorage['users']);
 
-	//console.log(retrievedObject);
+	//console.log('retrieved Object: ', JSON.parse(localStorage['users']));
 
-	console.log('retrievedObject: ', JSON.parse(localStorage['users']));
-
-	}
+   }
 
 	constructor() {
-		console.log(this.title);
+		// console.log(this.title);
 	}
 
 	ngOnInit() {

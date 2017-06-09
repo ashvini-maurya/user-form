@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   // styleUrls: ['./app.component.css']
   template: `
   	<app-user></app-user>
+  	<app-table></app-table>
   `,
 })
 
