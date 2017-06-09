@@ -32,4 +32,8 @@ export class AppComponent {
 
 }
 
+constructor() {
+	console.log('contructor ran!');
+}
+
 }
