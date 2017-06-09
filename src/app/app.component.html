@@ -6,12 +6,12 @@
 
   <form>
     <div class="container">
-      <input type="text" placeholder="Name" name="name" required>
-      <input type="text" placeholder="Username" name="username">
-      <input type="number" placeholder="Age" name="age">
-      <input type="text" placeholder="Location" name="location">
-      <input type="text" placeholder="Interests" name="interests">
-      <button type="button" class="registration">Register</button>
+      <input type="text" placeholder="Name" name="name" value="" id="name" required>
+      <input type="text" placeholder="Username" name="username" id="username">
+      <input type="number" placeholder="Age" name="age" id="age">
+      <input type="text" placeholder="Location" name="location" id="location">
+      <input type="text" placeholder="Interests" name="interests" id="interests">
+      <button type="button" id="register" (click)="register()">Register</button>
     </div>
   </form>
 
