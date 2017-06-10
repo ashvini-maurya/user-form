@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableComponent implements OnInit {
 
+
+  fakeObject = [];
+
   constructor() { }
 
   ngOnInit() {
+  	if ("users" in localStorage){
+  		this.fakeObject = JSON.parse(localStorage['users'])["root"];
+  	} else {
+  		this.fakeObject = [];
+  	}
   }
 
 }

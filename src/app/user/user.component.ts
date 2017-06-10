@@ -8,8 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class UserComponent implements OnInit {
 
   title = 'app';
-  formObjects = [];
+  
+
   register(argument) {
+  	var formObjects = []
+  	if ( "users" in localStorage)
+  		formObjects = JSON.parse(localStorage['users'])['root']
+  	else
+  		formObjects = []
+
+  	console.log(formObjects);
+
 	var formObject = 
 		{
 			name: (<HTMLInputElement>document.getElementById('name')).value,
@@ -19,14 +28,20 @@ export class UserComponent implements OnInit {
 			interests: (<HTMLInputElement>document.getElementById('interests')).value
 		}
 
-	this.formObjects.push(formObject)
-	localStorage['users'] = JSON.stringify({root: this.formObjects})	
+	formObjects.push(formObject)
+	localStorage['users'] = JSON.stringify({root: formObjects})	
 
-	console.log(localStorage['users']);
 
 	//console.log('retrieved Object: ', JSON.parse(localStorage['users']));
 
-   }
+   // }
+
+
+}
+
+
+
+
 
 	constructor() {
 		// console.log(this.title);

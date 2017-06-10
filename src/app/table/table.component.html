@@ -7,28 +7,11 @@
       <th>Interests</th>
     </tr>
     <!-- <tr *ngFor="let person of localStorage"> -->
-    <tr>
-      <!-- <td>
-      	{{person.name}}
-      </td>
-      <td>
-      	{{person.username}}
-      </td>
-      <td>
-      	{{person.age}}
-      </td>
-      <td>
-      	{{person.location}}
-      </td>
-      <td>
-      	{{person.interests}}
-      </td> -->
-
-      <td>Ashvini Kumar</td>
-      <td>Ashvini</td>
-      <td>24</td>
-      <td>Bangalore</td>
-      <td>Novels, Movies, Music</td>
-    </tr>
-    
-  </table>
+    <tr *ngFor="let i of fakeObject">
+      <td>{{i.name}}</td>
+      <td>{{i.username}}</td>
+      <td>{{i.age}}</td>
+      <td>{{i.location}}</td>
+      <td>{{i.interests}}</td>
+     </tr>
+ </table>
