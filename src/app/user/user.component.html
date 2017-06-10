@@ -1,21 +1,29 @@
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
  <div style="text-align:center">
   <h1>
     Welcome to {{title}}!!
   </h1>
 
-  <!-- <p>{{formObject.name}}</p> -->
-
-
-  <form>
-    <div class="container">
-      <input type="text" placeholder="Name" name="name" value="" id="name" required>
-      <input type="text" placeholder="Username" name="username" id="username">
-      <input type="number" placeholder="Age" name="age" id="age">
-      <input type="text" placeholder="Location" name="location" id="location">
-      <input type="text" placeholder="Interests" name="interests" id="interests">
-      <button type="button" id="register" (click)="register()">Register</button>
-    </div>
-  </form>
+  <div class="container">
+  	<form class="form-inline">
+  		<div class="form-group">
+  			<input type="text" class="form-control" placeholder="Name" name="name" value="" id="name" required>
+  		</div>
+  		<div class="form-group">
+	      	<input type="text" class="form-control" placeholder="Username" name="username" id="username">
+  		</div>
+  		<div class="form-group">
+      		<input type="number" class="form-control" placeholder="Age" name="age" id="age">  			
+  		</div>
+  		<div class="form-group">
+	      	<input type="text" class="form-control" placeholder="Location" name="location" id="location">
+  		</div>
+  		<div class="form-group">
+      		<input type="text" class="form-control" placeholder="Interests" name="interests" id="interests"> 
+  		</div>
+      	<button type="submit" class="btn btn-primary" id="register" (click)="register()">Register</button>
+  	</form>
+  </div>
 
   <br><br>
 
