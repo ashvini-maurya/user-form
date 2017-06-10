@@ -22,8 +22,10 @@ export class UserComponent implements OnInit {
 			username: (<HTMLInputElement>document.getElementById('username')).value,
 			age: (<HTMLInputElement>document.getElementById('age')).value,
 			location: (<HTMLInputElement>document.getElementById('location')).value,
-			interests: (<HTMLInputElement>document.getElementById('interests')).value
+			interests: (((<HTMLInputElement>document.getElementById('interests')).value).split(" ")).join(", ")
 		}
+
+		// alert(formObject)
 
 		formObjects.push(formObject)
 		localStorage['users'] = JSON.stringify({root: formObjects})	
