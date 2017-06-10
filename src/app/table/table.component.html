@@ -7,11 +7,11 @@
       <th>Interests</th>
     </tr>
     <!-- <tr *ngFor="let person of localStorage"> -->
-    <tr *ngFor="let i of fakeObject">
+    <tr *ngFor="let i of fakeObject; let j = index">
       <td>{{i.name}}</td>
       <td>{{i.username}}</td>
       <td>{{i.age}}</td>
       <td>{{i.location}}</td>
-      <td>{{i.interests}}</td>
+      <td>{{i.interests}}</td> <td><button (click)="deleteUser(j)">X</button></td>
      </tr>
  </table>
