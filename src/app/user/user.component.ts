@@ -66,18 +66,23 @@ export class UserComponent implements OnInit {
 		var validatedAge = this.ageValidation(object.age)
 		var validatedInterests = this.interestsValidation(object.interests)
 
-		if (validatedName != true || validatedUserName !== true || validatedAge != true || validatedInterests != true) {
+		if (validatedName !== true || validatedUserName !== true || validatedAge !== true || validatedInterests !== true) {
 			alert("You have problem in your form: " + validatedName + " " + validatedUserName + " " + validatedAge + " " + validatedInterests)
+			return false
+		} else {
+			return true
 		}
 	};
 
 
 	register(argument) {
 		var formObjects = []
-		if ( "users" in localStorage)
+		if ( "users" in localStorage) {
 			formObjects = JSON.parse(localStorage['users'])['root']
-		else
+		} 
+		else {
 			formObjects = []
+		}
 
 		var formObject = 
 		{
@@ -89,6 +94,7 @@ export class UserComponent implements OnInit {
 		}
 
 		//form Object validation
+		//this.validation(formObject)
 		if (this.validation(formObject)) {
 			formObjects.push(formObject)
 			localStorage['users'] = JSON.stringify({root: formObjects})
