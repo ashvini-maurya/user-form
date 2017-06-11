@@ -13,7 +13,8 @@ export class UserComponent implements OnInit {
 	// inside object validation
 	present(key, value) {
 		if (value.length > 0) {
-			return true
+			// return true
+			return ""
 		} else {
 			return { error: true, message: key + " is not present!"}.message
 		}
@@ -28,7 +29,8 @@ export class UserComponent implements OnInit {
 		if (localStorageUserNames.indexOf(value) !== -1) {
 			return { error: true, message: "username already taken, select another username" }.message
 		} else {
-			return true
+			// return true
+			return ""
 		}
 	}
 
@@ -42,7 +44,8 @@ export class UserComponent implements OnInit {
 
 	ageValidation(age) {
 		if (age >= 18) {
-			return true
+			// return true
+			return ""
 		} else {
 			return { error: true, message: "You should be atleast 18 years old!"}.message
 		}
@@ -54,7 +57,8 @@ export class UserComponent implements OnInit {
 
 	interestsValidation(interests) {
 		if (interests.indexOf(',') > -1) {
-			return true
+			// return true
+			return ""
 		} else {
 			return { error: true, message: "Please insert atleast two interests with comma separated!"}.message
 		}
@@ -66,7 +70,7 @@ export class UserComponent implements OnInit {
 		var validatedAge = this.ageValidation(object.age)
 		var validatedInterests = this.interestsValidation(object.interests)
 
-		if (validatedName !== true || validatedUserName !== true || validatedAge !== true || validatedInterests !== true) {
+		if (validatedName !== "" || validatedUserName !== "" || validatedAge !== "" || validatedInterests !== "") {
 			alert("You have problem in your form: " + validatedName + " " + validatedUserName + " " + validatedAge + " " + validatedInterests)
 			return false
 		} else {
