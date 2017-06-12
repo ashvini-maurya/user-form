@@ -75,6 +75,7 @@ export class UserComponent implements OnInit {
 			alert("You have problem in your form: " + validatedName + " " + validatedUserName + " " + validatedAge + " " + validatedInterests)
 			return false
 		} else {
+			alert("Successfully Inserted")
 			return true
 		}
 	};
