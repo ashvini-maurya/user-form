@@ -80,7 +80,7 @@ export class UserComponent implements OnInit {
 	};
 
 
-	register(argument) {
+	register() {
 		var formObjects = []
 		if ( "users" in localStorage) {
 			formObjects = JSON.parse(localStorage['users'])['root']
