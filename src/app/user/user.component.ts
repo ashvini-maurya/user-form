@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
 	selector: 'app-user',
 	templateUrl: './user.component.html',
-	styleUrls: ['./user.component.css']
+	styleUrls: ['./user.component.css'],
 })
+
 export class UserComponent implements OnInit {
 
 	title = 'app';
-
 
 	// inside object validation
 	present(key, value) {
@@ -27,7 +28,7 @@ export class UserComponent implements OnInit {
 			localStorageUserNames.push(JSON.parse(localStorage['users'])['root'][i]['username'])
 		}
 		if (localStorageUserNames.indexOf(value) !== -1) {
-			return { error: true, message: "username already taken, select another username" }.message
+			return { error: true, message: "username already taken, enter another username" }.message
 		} else {
 			// return true
 			return ""
@@ -105,11 +106,9 @@ export class UserComponent implements OnInit {
 		}		
 	}
 
-	constructor() {
-		// console.log(this.title);
-	}
 
-	ngOnInit() {
+	ngOnInit():  void {
+		// this.register();
 	}
 
 }
